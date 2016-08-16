@@ -1,0 +1,23 @@
+<h1>Search!!!!</h1>
+<form ng-submit="search.searchForMovie(search.title)">
+<div class="input-group input-group-lg">
+		<input type="text" class="form-control" placeholder="Enter a Movie" ng-model="search.title">
+		<span ng-click="search.searchForMovie(search.title)" class="input-group-addon">Go!</span>
+	</div>
+</form>
+	<div class="row">
+		<div ng-repeat="movie in search.results.Search | limitTo : 6" class="col-xs-4">
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					{{movie.Title}}
+				</div>
+			<div class="panel-body">
+				<div  class="text-center"><img ng-src="{{movie.Poster}}" width="120px"></div>
+				<p class="text-center">Filmed in {{movie.Year}}</p>
+				<a ui-sref="details({movieId: movie.Title})">Click here to view detail...</a>
+			</div>
+			</div>
+		</div>
+	</div>
+	<pre>vm.results | json</pre>
+	
