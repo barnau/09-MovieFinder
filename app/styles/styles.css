@@ -9,7 +9,9 @@
 
 }
 
-body {background-color: black;}
+body {
+	
+	background-color: black;}
 
 .jumbotron span {
 	margin-top: 0;
@@ -102,6 +104,15 @@ nav {
     background-color: #dddddd;
 }
 
+#navbar {
+	position:relative;
+}
+
+#navbar img {
+	position: absolute;
+	z-index: -1;
+	left: 50px;
+}
  
 
 
