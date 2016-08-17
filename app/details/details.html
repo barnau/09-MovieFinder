@@ -1,6 +1,30 @@
 <div class="jumbotron">
-	<div><h1 class="">{{detail.movieDetails.Title}}<span>({{detail.movieDetails.Year}})</span></h1><div>
-	<div id="rating">
-		<span class="glyphicon glyphicon-star" aria-hidden="true">
-	</div>
+    <div>
+        <h1 class="">{{detail.movieDetails.Title}}<span>({{detail.movieDetails.Year}})</span></h1>
+        
+    </div>
+    <div id="ratingContainer">
+        <div id="rating">
+
+           <i class="fa fa-star fa-2x">{{detail.movieDetails.imdbRating}}</i>
+           <img class="pull-right" width="98px" ng-src="{{detail.movieDetails.Poster}}">
+		</div>
+    </div>
+
+    <div>
+    	<ul id="info-bank">
+		  <li>Rated {{detail.movieDetails.Rated}}</li>
+		  <li>{{detail.movieDetails.Genre}}</li>
+		  <li>{{detail.movieDetails.Country}}</li>
+		  <li>{{detail.movieDetails.Runtime}}</li>
+		</ul>
+    </div>
+</div>
+
+<div class="well well-lg">
+	<h4>Plot:</h4>
+	<p>{{detail.movieDetails.Plot}}</p>
+	<p><strong>Director:</strong> {{detail.movieDetails.Director}}</p>
+	<p><strong>Cast:</strong> {{detail.movieDetails.Actors}}</p>
+	<p><strong>Awards:</strong> {{detail.movieDetails.Awards}}</p>
 </div>

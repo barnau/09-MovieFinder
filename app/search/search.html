@@ -1,12 +1,12 @@
-<h1>Search!!!!</h1>
+
 <form ng-submit="search.searchForMovie(search.movieTitle)">
-<div class="input-group input-group-lg">
-		<input type="text" class="form-control" placeholder="Enter a Movie" ng-model="search.movieTitle">
+	<div class="input-group input-group-lg">
+		<input type="text" class="form-control" placeholder="Enter a Movie..." ng-model="search.movieTitle">
 		<span ng-click="search.searchForMovie(search.movieTitle)" class="input-group-addon">Go!</span>
 	</div>
 </form>
 	<div class="row">
-		<div ng-repeat="movie in search.results.Search | limitTo : 6" class="col-xs-4">
+		<div ng-repeat="movie in search.results.Search " class="col-xs-4">
 			<div class="panel panel-default">
 				<div class="panel-heading">
 					{{movie.Title}}

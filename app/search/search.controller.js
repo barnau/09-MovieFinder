@@ -5,10 +5,10 @@
         .module('app')
         .controller('SearchController', SearchController);
 
-    SearchController.$inject = ['MovieFactory'];
+    SearchController.$inject = ['MovieFactory', 'toastr' ];
 
     /* @ngInject */
-    function SearchController(MovieFactory) {
+    function SearchController(MovieFactory, toastr) {
         var vm = this;
         vm.title = 'SearchController';
 
@@ -20,8 +20,14 @@
             MovieFactory.getMovieData(movieTitle).then(
             function(response) {
 
-                vm.results = response.data;
-                console.log(vm.results);
+                if(response.data.Response === "False") {
+                    toastr.error('Could not find a movie by that name.', 'Error'); 
+                
+
+                } else {
+                   vm.results = response.data;
+                    console.log(vm.results);
+                }
 
         });
 
