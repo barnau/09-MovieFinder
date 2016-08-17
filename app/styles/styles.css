@@ -24,7 +24,8 @@ body {
 }
 
 #rating {
-	background-color: #278f72;
+	
+	background: linear-gradient( #278f72 , #333333);
 	width:130px;
 	height:194px;
 	position: absolute;
@@ -64,7 +65,7 @@ h1 {
 
 
 form {
-	margin-top: 30px;
+	margin: 30px;
 }
 
 
@@ -112,6 +113,11 @@ nav {
 	position: absolute;
 	z-index: -1;
 	left: 50px;
+}
+
+.panel-body {
+	
+	background: linear-gradient( #278f72 , #333333);
 }
  
 
