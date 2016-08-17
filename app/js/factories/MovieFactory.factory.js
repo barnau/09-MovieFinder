@@ -5,10 +5,10 @@
         .module('app')
         .factory('MovieFactory', MovieFactory);
 
-    MovieFactory.$inject = ['$http','$stateParams'];
+    MovieFactory.$inject = ['$http'];
 
     /* @ngInject */
-    function MovieFactory($http, $stateParams) {
+    function MovieFactory($http) {
         var service = {
             getMovieData: getMovieData,
             getMovieDetailData: getMovieDetailData
@@ -22,8 +22,8 @@
         	return $http.get('http://www.omdbapi.com/?s=' + title + '&r=json');
         };
 
-        function getMovieDetailData($stateParams) {
-            return $http.get('http://www.omdbapi.com/?t=' + $stateParams.movieId + '&r=json');
+        function getMovieDetailData(title) {
+            return $http.get('http://www.omdbapi.com/?t=' + title + '&r=json');
         }
     }
 })();

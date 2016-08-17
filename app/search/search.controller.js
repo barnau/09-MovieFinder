@@ -13,11 +13,11 @@
         vm.title = 'SearchController';
 
         vm.test ="This is test data from search controller";
-        vm.title = "";
+        vm.movieTitle = "";
 
-        vm.searchForMovie = function(title) {
+        vm.searchForMovie = function(movieTitle) {
 
-            MovieFactory.getMovieData(title).then(
+            MovieFactory.getMovieData(movieTitle).then(
             function(response) {
 
                 vm.results = response.data;

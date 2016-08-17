@@ -5,17 +5,24 @@
         .module('app')
         .controller('DetailsController', DetailsController);
 
-    DetailsController.$inject = ['MovieFactory'];
+    DetailsController.$inject = ['MovieFactory', '$stateParams'];
 
     /* @ngInject */
-    function DetailsController(MovieFactory) {
+    function DetailsController(MovieFactory, $stateParams) {
         var vm = this;
         vm.title = 'DetailsController';
+        vm.test = 'this is a test';
 
-        // MovieFactory.getMovieData().then(
-        //     function(response) {
+        vm.movieName = $stateParams.movieId;
+        
 
-        // });
+
+        MovieFactory.getMovieDetailData(vm.movieName).then(
+            function(response) {
+                console.log(response.data);
+                vm.movieDetails = response.data;
+
+        });
         
         
         activate();

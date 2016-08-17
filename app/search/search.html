@@ -1,8 +1,8 @@
 <h1>Search!!!!</h1>
-<form ng-submit="search.searchForMovie(search.title)">
+<form ng-submit="search.searchForMovie(search.movieTitle)">
 <div class="input-group input-group-lg">
-		<input type="text" class="form-control" placeholder="Enter a Movie" ng-model="search.title">
-		<span ng-click="search.searchForMovie(search.title)" class="input-group-addon">Go!</span>
+		<input type="text" class="form-control" placeholder="Enter a Movie" ng-model="search.movieTitle">
+		<span ng-click="search.searchForMovie(search.movieTitle)" class="input-group-addon">Go!</span>
 	</div>
 </form>
 	<div class="row">
@@ -19,5 +19,5 @@
 			</div>
 		</div>
 	</div>
-	<pre>vm.results | json</pre>
+	
 	

@@ -8,3 +8,24 @@
 
 
 }
+
+.jumbotron span {
+	font-size: 40%;
+	padding-left: 30px;
+}
+
+#rating {
+	background-color: red;
+	position: absolute;
+	width:130px;
+	float: right;
+	height:194px;
+	right:370px;
+	top:0;
+
+}
+
+.glyphicon-star {
+	font-size:75px;
+}
+
