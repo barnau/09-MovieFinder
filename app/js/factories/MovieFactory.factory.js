@@ -19,11 +19,11 @@
         
 
         function getMovieData(title) {
-        	return $http.get('http://www.omdbapi.com/?s=' + title + '&r=json');
+        	return $http.get('http://www.omdbapi.com/?s=' + title + '&r=json&type=movie');
         };
 
         function getMovieDetailData(title) {
-            return $http.get('http://www.omdbapi.com/?t=' + title + '&r=json');
+            return $http.get('http://www.omdbapi.com/?t=' + title + '&r=json&type=movie');
         }
     }
 })();
